@@ -1,8 +1,8 @@
 <h2>My Heroes</h2>
 <div>
     <ul class="heroes-list">
-        <li *ngFor="let hero of heroes">
-            <button type="button">
+        <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
+            <button type="button" (click)="onSelect(hero)">
                 <span class="badge">{{hero.id}}</span>
                 <span class="name">{{hero.name}}</span>
             </button>
@@ -10,7 +10,29 @@
     </ul>
 </div>
 
-<h2>{{hero.name | uppercase}} Details</h2>
+
+<div *ngIf="selectedHero; else noneSelected">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+
+    <div>
+        <span>id: </span>{{selectedHero.id}}
+    </div>
+    <div>
+        <span>name: </span>{{selectedHero.name}}
+    </div>
+    <div>
+        <label for="name">Hero name: </label>
+        <input type="text" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+</div>
+<ng-template #noneSelected>
+    <div>
+        <h2>Select a hero to see details.</h2>
+    </div>
+</ng-template>
+
+<!----------------- Static hero details ----------------->
+<!-- <h2>{{hero.name | uppercase}} Details</h2>
 
 <div>
     <span>id: </span>{{hero.id}}
@@ -21,4 +43,4 @@
 <div>
     <label for="name">Hero name: </label>
     <input type="text" [(ngModel)]="hero.name" placeholder="name">
-</div>
+</div> -->
