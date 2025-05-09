@@ -1,7 +1,8 @@
 import {CommonModule} from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule for NgModel
-import { Hero } from '../hero';
+import { Hero } from '../hero'; // Import interface
+import { HEROES} from "../hero-list"
 
 @Component({
   selector: 'app-heroes',
@@ -14,4 +15,5 @@ export class HeroesComponent {
     id : 1,
     name : "Windstorm"
   };
+  heroes = HEROES;
 }
