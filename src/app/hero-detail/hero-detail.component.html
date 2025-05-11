@@ -1,0 +1,20 @@
+<div *ngIf="hero; else noneSelected" class="hero-details">
+  <h2>Details for: {{hero.name | uppercase}}</h2>
+
+  <div>
+    <span>id: </span>{{hero.id}}
+  </div>
+  <div>
+    <span>name: </span>{{hero.name}}
+  </div>
+  <div>
+    <label for="name">Hero name: </label>
+    <input type="text" [(ngModel)]="hero.name" placeholder="name" />
+  </div>
+</div>
+
+<ng-template #noneSelected>
+  <div class="no-hero">
+    <h2>Select a hero from the list to see its details.</h2>
+  </div>
+</ng-template>

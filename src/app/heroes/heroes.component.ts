@@ -1,22 +1,16 @@
-import {CommonModule} from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // Import FormsModule for NgModel
+import { CommonModule } from '@angular/common';
 import { Hero } from '../hero'; // Import interface
-import { HEROES} from "../hero-list"
+import { HEROES} from "../hero-list";
+import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
 @Component({
   selector: 'app-heroes',
-  imports: [ CommonModule, FormsModule ],
+  imports: [ CommonModule, HeroDetailComponent],
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css'
 })
 export class HeroesComponent {
-  // static test hero
-  // hero : Hero = {
-  //   id : 1,
-  //   name : "Windstorm"
-  // };
-
   heroes = HEROES;
   selectedHero? : Hero;
 

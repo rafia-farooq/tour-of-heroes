@@ -1,4 +1,15 @@
 /* HeroesComponent's private CSS styles */
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-hero-detail {
+  padding: 30px 60px;
+  margin-right: 10%;
+}
+
 .heroes-list {
   margin: 0 0 2em 0;
   list-style-type: none;
