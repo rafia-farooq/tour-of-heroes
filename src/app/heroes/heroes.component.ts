@@ -4,6 +4,7 @@ import { Hero } from '../hero'; // Import interface
 // import { HEROES} from "../hero-list";
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -19,11 +20,12 @@ export class HeroesComponent {
 
   // method to show hero details on click
   onSelect(hero: Hero) : void{
-    this.selectedHero = hero
+    this.selectedHero = hero;
+    this.messageService.add(`Selected hero: ${hero.name}`)
   }
 
   // inject an instance of HeroService when the component is created.
-  constructor(private heroService: HeroService) {}
+  constructor(private heroService: HeroService, private messageService : MessageService) {}
 
   // get list of heroes from the service
   // getHeroes() : void {
