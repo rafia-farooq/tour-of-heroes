@@ -26,9 +26,16 @@ export class HeroesComponent {
   constructor(private heroService: HeroService) {}
 
   // get list of heroes from the service
-  getHeroes() : void {
-    this.heroes = this.heroService.getHeroes()
+  // getHeroes() : void {
+  //   this.heroes = this.heroService.getHeroes()
+  // }
+
+  // updated version for asyn Observable
+  getHeroes(): void {
+  this.heroService.getHeroes()
+      .subscribe(list => this.heroes = list);
   }
+
   // call the above method in mgOnInit lifecycle hook
   ngOnInit(): void {
   this.getHeroes();
