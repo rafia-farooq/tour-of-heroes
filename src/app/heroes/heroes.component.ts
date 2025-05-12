@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Hero } from '../hero'; // Import interface
 // import { HEROES} from "../hero-list";
-import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
+// import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-heroes',
-  imports: [ CommonModule, HeroDetailComponent],
+  imports: [ CommonModule, RouterLink],
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css'
 })
@@ -16,13 +17,13 @@ export class HeroesComponent {
   // heroes = HEROES;
   heroes: Hero[] = [];
 
-  selectedHero? : Hero;
+  // selectedHero? : Hero;
 
   // method to show hero details on click
-  onSelect(hero: Hero) : void{
-    this.selectedHero = hero;
-    this.messageService.add(`Selected hero: ${hero.name}`)
-  }
+  // onSelect(hero: Hero) : void{
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`Selected hero: ${hero.name}`)
+  // }
 
   // inject an instance of HeroService when the component is created.
   constructor(private heroService: HeroService, private messageService : MessageService) {}
