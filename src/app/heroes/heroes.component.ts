@@ -41,6 +41,17 @@ export class HeroesComponent {
 
   // call the above method in mgOnInit lifecycle hook
   ngOnInit(): void {
-  this.getHeroes();
-}
+    this.getHeroes();
+  }
+
+  add(name: string): void {
+    // check for empty entries
+    name = name.trim();
+    if (!name) { return; }
+
+    this.heroService.addHero({ name } as Hero)
+      .subscribe(hero => {
+        this.heroes.push(hero);
+      });
+  }
 }
