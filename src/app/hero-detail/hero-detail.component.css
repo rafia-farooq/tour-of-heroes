@@ -19,9 +19,16 @@
 }
 
 .hero-details input {
+  font-size: 18px;
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.update-btn {
+  border: solid 1px maroon;
+  padding: 5px 15px;
+  margin-left: 20px;
 }
 
 .no-hero {

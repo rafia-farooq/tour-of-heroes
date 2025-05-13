@@ -27,4 +27,15 @@ getHero(id: number): Observable<Hero> {
 }
 
   constructor(private messageService : MessageService) { }
+
+  updateHero(hero: Hero): Observable<Hero> {
+    const index = HEROES.findIndex(h => h.id === hero.id);
+    if (index !== -1) {
+      HEROES[index] = { ...hero };
+      console.log(`Updated hero locally: id=${hero.id}`);
+    }
+    return of(hero);
+  }
+
+
 }

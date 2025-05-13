@@ -10,8 +10,9 @@
   <div>
     <label for="name">Edit Hero name: </label>
     <input type="text" [(ngModel)]="hero.name" placeholder="name" />
+    <button type="button" class="update-btn" (click)="update()">Update</button>
   </div>
-  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="goBack()">Go back</button>
 </div>
 
 <ng-template #noneSelected>
