@@ -42,4 +42,19 @@ getHero(id: number): Observable<Hero> {
     console.log( `New hero add ${hero.name} at id=${hero.id}`);
     return of(hero);
   }
+
+  deleteHero(id: number): Observable<Hero | undefined> {
+  const newList = HEROES.findIndex(h => h.id === id);
+
+  if (newList > -1) {
+    const deletedHero = HEROES[newList];
+    HEROES.splice(newList, 1); // Remove hero from array
+    console.log(`deleted hero id=${id}`);
+    return of(deletedHero);
+  } else {
+    console.log(`hero with id=${id} not found`);
+    return of(undefined); // or throw error if preferred
+  }
+}
+
 }
