@@ -38,8 +38,7 @@ getHero(id: number): Observable<Hero> {
   }
 
   addHero(hero: Hero): Observable<Hero> {
-    hero.id = HEROES.length + 1;
-    HEROES.push(hero);
+    hero.id = HEROES.length + 11;
     console.log( `New hero add ${hero.name} at id=${hero.id}`);
     return of(hero);
   }
