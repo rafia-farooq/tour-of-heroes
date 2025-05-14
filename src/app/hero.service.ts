@@ -53,8 +53,28 @@ getHero(id: number): Observable<Hero> {
     return of(deletedHero);
   } else {
     console.log(`hero with id=${id} not found`);
-    return of(undefined); // or throw error if preferred
+    return of(undefined);
   }
-}
+  }
+
+  searchHeroes(term: string): Observable<Hero[]> {
+    term = term.trim();
+    if (!term) {
+      return of([]);
+    }
+
+    const matchingHeroes = HEROES.filter(hero =>
+      hero.name.toLowerCase().includes(term.toLowerCase())
+    );
+
+    console.log(
+      matchingHeroes.length
+        ? `found heroes matching "${term}"`
+        : `no heroes matching "${term}"`
+    );
+
+    return of(matchingHeroes);
+  }
+
 
 }
