@@ -5,6 +5,12 @@
 # Deploy to GitHub Pages
 
 - In the terminal of the project - using angular-cli-gh-pages
+- Make sure  git remote -v cmd shows url and not ssh connection @github...
+
+origin  https://github.com/rafia-farooq/tour-of-heroes.git (fetch)
+origin  https://github.com/rafia-farooq/tour-of-heroes.git (push)
+
+
 
 ```terminal
 ng deploy --base-href=/tour-of-heroes/
