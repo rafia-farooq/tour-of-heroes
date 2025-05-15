@@ -1,6 +1,13 @@
-# Live site Link:
+# Live site Link
 
 [Live Site: Tour of Heores](https://rafia-farooq.github.io/tour-of-heroes)
+
+# Deploy to GitHub Pages
+
+
+```terminal of the project - using angular-cli-gh-pages
+ng deploy --base-href=/tour-of-heroes/
+```
 
 # TourOfHeroes
 
