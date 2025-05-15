@@ -17,8 +17,8 @@ export class HeroFormComponent {
 
   submitted = false;
 
-  onSubmit() { 
-    this.submitted = true; 
-    console.log(`New Hero added`)
+  onSubmit() {
+    this.submitted = true;
+    console.log(`New Hero ${this.model.name} added`)
   }
 }
