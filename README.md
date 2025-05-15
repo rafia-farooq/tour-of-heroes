@@ -12,10 +12,23 @@ origin  https://github.com/rafia-farooq/tour-of-heroes.git (fetch)
 origin  https://github.com/rafia-farooq/tour-of-heroes.git (push)
 ```
 
+-Otherwise run this command
+
+```
+git remote set-url origin https://github.com/rafia-farooq/tour-of-heroes.git
+
+```
+
 - Then run 
 
 ```terminal
 ng deploy --base-href=/tour-of-heroes/
+```
+
+Revert back 
+
+```
+git remote set-url origin git@github.com:rafia-farooq/tour-of-heroes.git
 ```
 
 # TourOfHeroes
