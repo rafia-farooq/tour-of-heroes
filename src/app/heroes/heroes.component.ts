@@ -6,10 +6,11 @@ import { Hero } from '../hero'; // Import interface
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
 import { RouterLink } from '@angular/router';
+import { MessagesComponent } from '../messages/messages.component';
 
 @Component({
   selector: 'app-heroes',
-  imports: [ CommonModule, RouterLink],
+  imports: [ CommonModule, RouterLink, MessagesComponent],
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css'
 })

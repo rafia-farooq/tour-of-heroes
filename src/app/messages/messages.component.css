@@ -1,24 +1,24 @@
 .message-box {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #424f5b;
     background-color: #f9f9f9;
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
 }
 
-.message-box h2 {
+.message-box h4 {
     margin-top: 0;
     color: maroon;
 }
 
 .message-box p {
     margin: 10px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px dotted grey;
 }
 
 .message-box button {
     display: block;
-    margin: 15px auto;
+    margin: 5px auto;
 }
 
 .message-box button:hover {
