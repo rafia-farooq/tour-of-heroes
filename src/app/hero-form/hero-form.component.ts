@@ -21,4 +21,8 @@ export class HeroFormComponent {
     this.submitted = true;
     console.log(`New Hero ${this.model.name} added`)
   }
+
+  newHero() {
+    this.model = new HeroClass(42, '', '');
+  }
 }
