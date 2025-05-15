@@ -4,8 +4,9 @@
 
 # Deploy to GitHub Pages
 
+- In the terminal of the project - using angular-cli-gh-pages
 
-```terminal of the project - using angular-cli-gh-pages
+```terminal
 ng deploy --base-href=/tour-of-heroes/
 ```
 
